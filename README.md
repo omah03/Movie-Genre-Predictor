@@ -1,6 +1,6 @@
 # Movie-Genre-Predictor
 A simple mini project that leverages the power of Machine Learning and the Scikit Library to roughly guess the genre of a movie based on it's plot summary. 
-Currently only works with the test set, doesn't accept user input
+Currently only works with the test set, doesn't accept user input (maybe in future)
 
 Code with explination:
 
@@ -33,5 +33,17 @@ mlb = MultiLabelBinarizer()
 y_encoded = mlb.fit_transform(genres)
 unique_genres = mlb.classes_
 ```
+Now we use the TfidVectorizer class from scikit-learn to convert text document into TF-IDF matrix. In our case, each row represnts the plot summary and each column represents a specific word from the entire dataset. We then use fit_transform to apply this transformation on the matrix of features. 
+
+'''
+vectorizer = TfidfVectorizer(max_features=1000, norm='l2')
+X_tfidf = vectorizer.fit_transform(plot_summaries)
+'''
+
+We split the dataset into a training and a test set, matrix of features and the dependent variable.
+
+'''
+X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y_encoded, test_size = 0.25, random_state = 0)
+'''
 
 
