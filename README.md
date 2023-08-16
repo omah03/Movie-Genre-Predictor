@@ -5,7 +5,6 @@ Currently only works with the test set, doesn't accept user input
 Code with explination:
 
 We staart by importing the needed libraries.
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
