@@ -16,6 +16,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import hamming_loss, f1_score`
 ```
 Using pandas, the contents of imbd.csv are loaded into Pandas DataFrame. The delimiter = ';' argument makes note of the fact that the delimiter used in the CSV file to seperate values is ';'
+
+We apply a lambda function that takes input x (each elemnt in 'genre') and splits the genres listed in a single string into a list of seperate genre values.
+(Basically splits multiple genres into individual genres)
 ```
 dataset = pd.read_csv('imdb.csv', delimiter=';')
 dataset['genre'] = dataset['genre'].apply(lambda x: x.split(', '))
