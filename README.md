@@ -15,3 +15,4 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import hamming_loss, f1_score`
 ```
+Using pandas, the contents of imbd.csv are loaded into Pandas DataFrame. The delimiter = ';' argument makes note of the fact that the delimiter used in the CSV file to seperate values is ';'
