@@ -1,7 +1,8 @@
 # Movie-Genre-Predictor
 A simple mini project that leverages the power of Machine Learning and the Scikit Library to roughly guess the genre of a movie based on it's plot summary. 
 Currently only works with the test set, doesn't accept user input (maybe in future)
-
+Dataset:
+https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb
 Code with explination:
 
 Importing needed libraries.
