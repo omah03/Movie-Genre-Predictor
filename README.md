@@ -54,6 +54,21 @@ y_pred = model.predict(X_test)
 predicted_genres = mlb.inverse_transform(y_pred)
 actual_genres = mlb.inverse_transform(y_test)
 ```
+We display the data nicely
+```
+for i in range(len(predicted_genres)):
+    print(f"Plot Summary {i+1}:")
+    print("Predicted Genres:", predicted_genres[i])
+    print("Actual Genres:", actual_genres[i])
+    print("="*30)
+```
 
+We use Hamming loss and F1 micro/macro as metrics for perforamnce. 
+```
+hamming_loss_value = hamming_loss(y_test, y_pred)
+f1_micro = f1_score(y_test, y_pred, average='micro')
+f1_macro = f1_score(y_test, y_pred, average='macro')
+```
 
-
+RESULTS 
+w.i.p
