@@ -15,8 +15,6 @@ mlb = MultiLabelBinarizer()
 y_encoded = mlb.fit_transform(genres)
 unique_genres = mlb.classes_
 
-
-plot_summaries = dataset['plot_summary']
 vectorizer = TfidfVectorizer(max_features=1000, norm='l2')
 X_tfidf = vectorizer.fit_transform(plot_summaries)
 
