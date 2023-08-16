@@ -1,2 +1,2 @@
 # Movie-Genre-Predictor
-WIP
+A simple project that leverages the power of Machine Learning and Scikit Library
