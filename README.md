@@ -47,7 +47,13 @@ X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y_encoded, test_siz
 
 Using Random Forest Classification model, we train it on the training set and use it to predict the test set genres. We use the inverse_transform to convert the binary genre labels to original genre names.
 
-
+```
+model = RandomForestClassifier(random_state=0)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+predicted_genres = mlb.inverse_transform(y_pred)
+actual_genres = mlb.inverse_transform(y_test)
+```
 
 
 
